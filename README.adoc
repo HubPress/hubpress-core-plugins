@@ -1,0 +1,8 @@
+= HubPress: plugins
+
+Module to register plugins and define events
+
+== TODO
+
+. Complete this README
+. Add tests
