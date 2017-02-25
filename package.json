@@ -1,10 +1,10 @@
 {
   "name": "hubpress-core-plugins",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Plugins manager for HubPress",
   "main": "lib/index.js",
   "scripts": {
-    "compile": "babel --presets es2015 -d lib/ src/ && find ./lib -name '*.js' -exec ./node_modules/uglify-js/bin/uglifyjs --compress --mangle --output {} -- {} \\;",
+    "compile": "babel --presets es2015 -d lib/ src/",
     "prepublish": "npm run compile",
     "test": "npm run compile && mocha --compilers js:babel-core/register"
   },
@@ -14,9 +14,14 @@
     "lib"
   ],
   "dependencies": {
-    "q": "^1.1.2"
+    "bluebird": "^3.4.6",
+    "lodash": "^4.17.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.0.0",
+    "babel-core": "^6.0.0",
+    "babel-plugin-transform-runtime": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
     "uglify-js": "^2.6.2"
   }
 }
